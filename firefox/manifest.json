@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "RTL",
+  "version": "1.0.1",
+  "description": "rtl-extension detects and toggles the language direction : ('rtl'/'ltr') of any site.",
+  "icons": {
+    "32": "images/rtl-toggle.png",
+    "48": "images/rtl-toggle.png",
+    "128": "images/rtl-toggle.png"
+  },
+  "action": {
+    "default_title": "Toggle language direction",
+    "default_icon": {
+      "32": "images/rtl-toggle.png",
+      "48": "images/rtl-toggle.png",
+      "128": "images/rtl-toggle.png"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "rtl-init-check.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rtl@tknoglobal",
+      "strict_min_version": "109.0"
+    }
+  }
+}
