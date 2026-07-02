@@ -3,7 +3,7 @@
 A modern, lightweight, and powerful browser extension to detect and toggle the page layout direction between RTL (Right-to-Left) and LTR (Left-to-Right) on any website.
 
 <div align="center">
-  <img src="https://github.com/hamzabellouch/rtl/blob/main/RTL.jpeg" width="800"/>
+  <img src="https://github.com/hamzabellouch/rtl/blob/main/RTL.png" width="800"/>
 </div>
 
 Compatible with all major browsers: **Chrome, Brave, Edge, Opera (Chromium-based)** and **Mozilla Firefox**.
