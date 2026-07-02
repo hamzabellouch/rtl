@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "RTL Beta",
+  "version": "1.5.0",
+  "description": "rtl-extension detects and toggles the language direction : ('rtl'/'ltr') of any site.",
+  "icons": {
+    "16": "images/ltr-16.png",
+    "32": "images/ltr-32.png",
+    "48": "images/ltr-48.png",
+    "128": "images/ltr-128.png"
+  },
+  "action": {
+    "default_title": "Toggle language direction",
+    "default_icon": {
+      "16": "images/ltr-16.png",
+      "32": "images/ltr-32.png",
+      "48": "images/ltr-48.png",
+      "128": "images/ltr-128.png"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "rtl-init-check.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rtl@tknoglobal",
+      "strict_min_version": "109.0"
+    }
+  }
+}
